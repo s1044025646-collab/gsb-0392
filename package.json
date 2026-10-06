@@ -1,0 +1,23 @@
+﻿{
+  "name": "png-lsb1-service",
+  "version": "1.0.0",
+  "description": "PNG 低位载荷嵌入与逐位提取核验后端（API + CLI）",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "start": "npm run build && node dist/src/server.js",
+    "cli": "npm run build && node dist/src/cli.js",
+    "fixtures": "npm run build && node dist/src/cli.js fixtures",
+    "demo": "npm run build && node dist/src/cli.js demo"
+  },
+  "dependencies": {
+    "pngjs": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "@types/pngjs": "*",
+    "typescript": "*"
+  }
+}
