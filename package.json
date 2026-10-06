@@ -1,0 +1,26 @@
+{
+  "name": "png-lsb-lab",
+  "version": "1.0.0",
+  "description": "Windows 本地 PNG RGB 最低位载荷嵌入、提取与核验后端",
+  "type": "module",
+  "main": "dist/src/server.js",
+  "bin": {
+    "png-lsb": "dist/src/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsx --test tests/**/*.test.ts",
+    "start": "tsx src/server.ts",
+    "demo": "tsx scripts/demo.ts",
+    "cli": "tsx src/cli/index.ts"
+  },
+  "dependencies": {
+    "pngjs": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/pngjs": "^6.0.5",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
